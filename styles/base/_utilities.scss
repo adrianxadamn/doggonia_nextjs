@@ -1,0 +1,251 @@
+/* ==========================================================================
+   # HIDE
+   ========================================================================== */
+
+.u-desktop-only {
+  display: none !important;
+  @include mq($screen-md) {
+    display: block !important;
+    &.u-desktop-only--inline {
+      display: inline !important;
+    }
+    &.u-desktop-only--flex {
+      display: flex !important;
+    }
+  }
+}
+
+br.u-desktop-only {
+  display: none !important;
+  @include mq($screen-md) {
+    display: inline !important;
+  }
+}
+
+table.u-desktop-only {
+  display: none !important;
+  @include mq($screen-md) {
+    display: table !important;
+  }
+}
+
+table.u-desktop-tablet-only {
+  display: none !important;
+  @include mq($screen-lg) {
+    display: table !important;
+  }
+}
+
+.u-mobile-only {
+  @include mq($screen-md) {
+    display: none !important;
+  }
+}
+
+.u-mobile-tablet-only {
+  @include mq($screen-lg) {
+    display: none !important;
+  }
+}
+
+.u-desktop-tablet-only {
+  display: none !important;
+  @include mq($screen-lg) {
+    display: block !important;
+    &.u-desktop-only--inline {
+      display: inline !important;
+    }
+    &.u-desktop-only--flex {
+      display: flex !important;
+    }
+  }
+}
+
+.u-desktop-1200-only {
+  display: none !important;
+  @include mq($screen-xl) {
+    display: block !important;
+  }
+}
+
+.u-mobile-1200-only {
+  @include mq($screen-xl) {
+    display: none !important;
+  }
+}
+
+.u-hidden, 
+.sr-only {
+  display: none !important;
+}
+
+.swell-opt-out-state-reveal-override {
+  > .u-hidden {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+[data-smooth-scroll] {
+  cursor: pointer;
+}
+
+.u-strikethrough, .was_price {
+  text-decoration: line-through;
+  color: $color-grey-dark;
+}
+
+.u-disable-scrollbar-styles {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+  }
+}
+
+.u-text-underline {
+  text-decoration: underline;
+}
+
+.u-light-bold {
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   # FONT
+   ========================================================================== */
+
+.text-center,
+.u-text-center {
+  text-align: center !important;
+}
+
+.text-left,
+.u-text-left {
+  text-align: left !important;
+}
+
+.text-right,
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-color--white {
+  color: $color-white;
+}
+a.u-text-color--white {
+  &:hover, &:focus {
+    color: $color-white;
+  }
+}
+
+/* ==========================================================================
+   # CONTAINERS
+   ========================================================================== */
+
+.container--new {
+  width: 100%;
+  padding: 0 20px;
+  margin: auto;
+  @include mq($screen-xl) {
+    padding: 0 40px;
+  }
+  @include mq($screen-xxl) {
+    padding: 0 75px;
+  }
+  @include mq($screen-4xl) {
+    padding: 0 220px;
+  }
+}
+
+.container--new--left {
+  width: 100%;
+  padding-left: 20px;
+  @include mq($screen-xl) {
+    padding-left: 40px;
+  }
+  @include mq($screen-xxl) {
+    padding-left: 75px;
+  }
+  @include mq($screen-4xl) {
+    padding-left: 220px;
+  }
+}
+
+.container--position-left {
+  position: absolute;
+  left: 20px;
+  @include mq($screen-xl) {
+    left: 40px;
+  }
+  @include mq($screen-xxl) {
+    left: 75px;
+  }
+  @include mq($screen-4xl) {
+    left: 220px;
+  }
+}
+
+.container--new--right {
+  width: 100%;
+  padding-right: 20px;
+  @include mq($screen-xl) {
+    padding-right: 40px;
+  }
+  @include mq($screen-xxl) {
+    padding-right: 75px;
+  }
+  @include mq($screen-4xl) {
+    padding-right: 220px;
+  }
+}
+
+.container--position-right {
+  position: absolute;
+  right: 20px;
+  @include mq($screen-xl) {
+    right: 40px;
+  }
+  @include mq($screen-xxl) {
+    right: 75px;
+  }
+  @include mq($screen-4xl) {
+    right: 220px;
+  }
+}
+
+.u-margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   # GEOIP PROMOS
+   ========================================================================== */
+
+.exclusive-country-promo {
+  display: none !important;
+  &.is-visible {
+    display: flex !important;
+  }
+}

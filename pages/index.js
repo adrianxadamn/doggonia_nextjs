@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import HomepageHero from '../components/homepage-hero';
+import MissionStatment from '../components/mission-statement';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomepageHero />
-      <h1>Doggonia</h1>
+      <MissionStatment />
     </div>
   )
 }

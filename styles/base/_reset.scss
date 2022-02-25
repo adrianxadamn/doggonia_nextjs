@@ -1,0 +1,165 @@
+/* #Reset & Basics
+================================================== */
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  font-family: $ikaros;
+  padding: 0 !important;
+}
+
+i {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 19px;
+  @include mq($screen-lg) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+body {
+    line-height: 1.4;
+}
+ol, ul {
+    list-style: none; }
+blockquote, q {
+    quotes: none; }
+blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none; }
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+
+* {
+	font-family: $ikaros;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  display: block;
+}
+
+video {
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form {
+  margin-bottom: 20px; 
+}
+fieldset {
+  margin-bottom: 20px; 
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="range"], input[type="color"], select, .fake-select, textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 9px;
+  margin: 0;
+  line-height: 22px;
+  border: 1px solid #000;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  outline: none;
+  background: #fff;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: $ikaros;
+  margin-bottom: 15px;
+}
+input[type="text"]:active, input[type="text"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="url"]:active, input[type="url"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="date"]:active, input[type="date"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="week"]:active, input[type="week"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="range"]:active, input[type="range"]:focus, input[type="color"]:active, input[type="color"]:focus, select:active, select:focus, textarea:active, textarea:focus {
+  border: 1px solid #000;
+  color: #4a4a4a;
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+  box-shadow:  0 0 3px rgba(0,0,0,.2); 
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type="radio"]{
+  -webkit-appearance: radio;
+}
+
+// select {
+//   background-image: url('https://cdn.shopify.com/s/files/1/1445/2216/files/filled-arrow-down.svg?v=1636758645');
+//   background-repeat: no-repeat;
+//   background-size: 10px;
+//   background-position: calc(100% - 10px) center;
+// }
+
+select::-ms-expand {
+  display: none;
+}
+label,
+legend {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+input[type="checkbox"] {
+  display: inline; 
+  -webkit-appearance:checkbox;
+}
+label span,
+legend span {
+  font-weight: bold;
+  font-size: 13px;
+  color: inherit; 
+}
+textarea { padding: 8px; min-height: 80px; }
