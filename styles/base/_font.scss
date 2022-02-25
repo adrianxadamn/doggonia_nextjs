@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Ikaros";
+  src: url("/fonts/Ikaros-Light.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Ikaros";
+  src: url("/fonts/Ikaros-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+* {
+  font-family: "Ikaros";
+}
