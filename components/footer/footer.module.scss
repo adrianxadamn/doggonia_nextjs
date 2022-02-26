@@ -1,0 +1,36 @@
+@import '../../styles/helpers/helpers';
+
+.footer {
+  display: flex;
+  padding: 60px;
+  background-color: #d8d8d8;
+}
+
+.footerBlock {
+  width: 50%;
+  padding: 32px;
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 50%;
+    margin: 5px 0;
+    padding-right: 5px;
+  }
+}
+
+.footerLogo {
+  width: 200px;
+}
+
+.footerInstagramLink {
+  margin: 5px 0;
+  svg {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/helpers/helpers';
+
+.promoBar {
+  background-color: #dfc360;
+  p {
+    text-align: center;
+    color: $color-white;
+    padding: 8px 20px;
+    margin: 0;
+  }
+}

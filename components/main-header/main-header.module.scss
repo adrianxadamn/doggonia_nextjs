@@ -1,0 +1,56 @@
+@import '../../styles/helpers/helpers';
+
+.mainHeader {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: $color-white;
+  box-shadow: 0 0 2px 0;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+  }
+  li {  
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 24px 16px;
+    }
+  }
+}
+
+.navLeft {
+  display: flex;
+  justify-content: flex-end;
+  width: 250px;
+}
+
+.navCenter {
+  a {
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    width: 200px;
+  }
+}
+
+.navRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+}
+
+.navRightLinks {
+  display: flex;
+}
+
+.cartBtn {
+
+}
