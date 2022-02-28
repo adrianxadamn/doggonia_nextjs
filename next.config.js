@@ -2,6 +2,9 @@
 
 module.exports = {
   reactStrictMode: true,
+  images: {
+    domains: ['cdn.shopify.com'],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

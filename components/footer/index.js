@@ -51,8 +51,8 @@ const Footer = ({props}) => {
       <div className={classes.footerBlock}>
         <h4>Site</h4>
         <ul className={classes.footerLinks}>
-          {footerLinks.map(link => {
-            return <li>
+          {footerLinks.map((link, index) => {
+            return <li key={index}>
               <Link href={link.url}><a>{link.title}</a></Link>
             </li>
           })}
