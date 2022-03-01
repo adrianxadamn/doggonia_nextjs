@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import classes from './product-images.module.scss';
-import {getProductImages} from '../../helpers';
+import {getProductImages} from '@/utils/helpers';
 import Image from 'next/image';
 
 const ProductImages = ({product}) => {

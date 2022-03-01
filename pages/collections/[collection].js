@@ -1,5 +1,5 @@
-import { getCollectionSlugs, getAllProductsInCollection } from '../../lib/shopify'
-import Grid from '../../components/grid';
+import { getCollectionSlugs, getAllProductsInCollection } from '@/lib/shopify'
+import Grid from '@/components/grid';
 
 const CollectionPage = ({ products, collection }) => {  
   return (

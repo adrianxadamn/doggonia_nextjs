@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import classes from './grid-item.module.scss';
-import ProductPrice from '../product-price';
+import ProductPrice from '@/components/product-price';
 const GridItem = ({item}) => {
   const image = item.images.edges[0].node;
   return (

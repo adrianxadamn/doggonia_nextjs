@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './product-details.module.scss';
-import ProductPrice from '../product-price';
+import ProductPrice from '@/components/product-price';
 const ProductDetails = ({product}) => {
   return (
     <div className={classes.productDetails}>

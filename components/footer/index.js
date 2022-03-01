@@ -6,7 +6,7 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 
-import LogoBlack from '../../svgs/doggonia-logo-black.svg';
+import LogoBlack from '@/svgs/doggonia-logo-black.svg';
 import classes from './footer.module.scss';
 
 const Footer = ({props}) => {

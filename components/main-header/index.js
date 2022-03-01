@@ -5,8 +5,8 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
-import PromoBar from '../promo-bar';
-import LogoBlack from '../../svgs/doggonia-logo-black.svg';
+import PromoBar from '@/components/promo-bar';
+import LogoBlack from '@/svgs/doggonia-logo-black.svg';
 import classes from './main-header.module.scss';
 
 const MainHeader = ({props}) => {

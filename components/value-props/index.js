@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './value-props.module.scss';
-import DogBowlSVG from '../../svgs/dog-bowl.svg';
-import LightBulbSVG from '../../svgs/lightbulb-innovation.svg';
-import PayingItForwardSVG from '../../svgs/paying-it-forward.svg';
+import DogBowlSVG from '@/svgs/dog-bowl.svg';
+import LightBulbSVG from '@/svgs/lightbulb-innovation.svg';
+import PayingItForwardSVG from '@/svgs/paying-it-forward.svg';
 
 const ValueProps = () => {
   return (

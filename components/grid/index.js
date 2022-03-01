@@ -1,5 +1,5 @@
 import React from 'react';
-import GridItem from '../grid-item';
+import GridItem from '@/components/grid-item';
 import classes from './grid.module.scss';
 const Grid = ({products}) => {
   return (

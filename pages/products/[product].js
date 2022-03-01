@@ -1,7 +1,7 @@
-import { getProductSlugs, getProduct } from '../../lib/shopify'
-import ProductDetails from '../../components/product-details';
-import ProductDescription from '../../components/product-description';
-import ProductImages from '../../components/product-images';
+import { getProductSlugs, getProduct } from '@/lib/shopify'
+import ProductDetails from '@/components/product-details';
+import ProductDescription from '@/components/product-description';
+import ProductImages from '@/components/product-images';
 
 const ProductPage = ({ productData }) => {  
   return (

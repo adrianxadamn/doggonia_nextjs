@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFirstVariant } from '../../helpers';
+import { getFirstVariant } from '@/utils/helpers';
 import classes from './product-price.module.scss';
 const ProductPrice = ({product, extraClasses = []}) => {
   const firstVariant = getFirstVariant(product);

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import DoggoniaLogoWhite from "../../svgs/doggonia-logo-white.svg";
+import DoggoniaLogoWhite from "@/svgs/doggonia-logo-white.svg";
 import classes from './homepage-hero.module.scss';
-import Button from '../button';
+import Button from '@/components/button';
 
 const HomepageHero = ({props}) => {
   return (
