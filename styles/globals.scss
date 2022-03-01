@@ -1,8 +1,22 @@
 @import './helpers/helpers';
 @import './base/base.scss';
+@import './vendor/slick.scss';
 
 
 .collectionPage {
   text-align: center;
   margin: 32px 0;
+}
+
+.productPage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0 150px;
+}
+
+.productMain {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  padding-right: 32px;
 }

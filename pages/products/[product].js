@@ -1,9 +1,16 @@
 import { getProductSlugs, getProduct } from '../../lib/shopify'
+import ProductDetails from '../../components/product-details';
+import ProductDescription from '../../components/product-description';
+import ProductImages from '../../components/product-images';
 
 const ProductPage = ({ productData }) => {  
   return (
-    <div>
-      Product Page
+    <div className="productPage">
+      <div className="productMain">
+        <ProductDetails product={productData} />
+        <ProductDescription product={productData} />
+      </div>
+      <ProductImages product={productData} />
     </div>
   )
 }

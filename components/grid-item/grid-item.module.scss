@@ -1,5 +1,3 @@
-@import '../../styles/helpers/helpers';
-
 .gridItem {
   width: 33.33%;
   padding: 24px;
@@ -15,23 +13,4 @@
     font-size: 17px;
     margin-bottom: 10px;
   }
-}
-
-.gridItemPriceWrap {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-  line-height: 24px;
-  span {
-    margin: 0 2.5px;
-  }
-}
-
-.gridItemPriceOnSale {
-  color: $color-warning;
-}
-
-.gridItemCompareAtPrice {
-  text-decoration: line-through;
-  color: #666666;
 }

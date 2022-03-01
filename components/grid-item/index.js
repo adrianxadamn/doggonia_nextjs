@@ -2,17 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import classes from './grid-item.module.scss';
-import {getFirstVariant} from '../../helpers';
+import ProductPrice from '../product-price';
 const GridItem = ({item}) => {
-
-  console.log(item);
-
   const image = item.images.edges[0].node;
-
-  const firstVariant = getFirstVariant(item);
-
-  console.log("firstVariant:", firstVariant);
-
   return (
     <li className={classes.gridItem}>
       <div className={classes.gridItemImage}>
@@ -28,16 +20,7 @@ const GridItem = ({item}) => {
             <h2>{item.title}</h2>
           </a>
         </Link>
-        <div className={classes.gridItemPriceWrap}>
-          {firstVariant.compareAtPrice ? (
-            <>
-              <span className={classes.gridItemPriceOnSale}>${firstVariant.price}</span>
-              <span className={classes.gridItemCompareAtPrice}>${firstVariant.compareAtPrice}</span>
-            </>
-          ) : (
-            <span>${firstVariant.price}</span>
-          )}
-        </div>
+        <ProductPrice product={item} />
       </div>
     </li>
   );

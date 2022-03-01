@@ -163,7 +163,7 @@ a.u-text-color--white {
    # CONTAINERS
    ========================================================================== */
 
-.container--new {
+.container {
   width: 100%;
   padding: 0 20px;
   margin: auto;
@@ -178,7 +178,7 @@ a.u-text-color--white {
   }
 }
 
-.container--new--left {
+.container--left {
   width: 100%;
   padding-left: 20px;
   @include mq($screen-xl) {
@@ -206,7 +206,7 @@ a.u-text-color--white {
   }
 }
 
-.container--new--right {
+.container--right {
   width: 100%;
   padding-right: 20px;
   @include mq($screen-xl) {

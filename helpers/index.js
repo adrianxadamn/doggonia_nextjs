@@ -4,3 +4,10 @@ export const getFirstVariant = (product) => {
   }
   return undefined
 };
+
+export const getProductImages = (product) => {
+  if (product && product.images && product.images.edges) {
+    return product.images.edges.map(image => image.node);
+  }
+  return undefined
+};
