@@ -23,6 +23,7 @@ export function useUpdateCartQuantityContext() {
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
+  const [showCart, setShowCart] = useState(false)
   const [checkoutId, setCheckoutId] = useState('')
   const [checkoutUrl, setCheckoutUrl] = useState('')
   const [isLoading, setisLoading] = useState(false)
@@ -43,6 +44,10 @@ export function CartProvider({ children }) {
       window.removeEventListener("storage", onReceiveMessage);
     }
   }, [])
+
+  useEffect(() => {
+    console.log("cart:", cart);
+  }, [cart]);
 
   async function addToCart(newItem) {
     setisLoading(true)
@@ -82,6 +87,7 @@ export function CartProvider({ children }) {
       saveLocalData(newCartWithItem, checkoutId, checkoutUrl)
     }
     setisLoading(false)
+    setShowCart(true);
   }
 
   async function updateCartItemQuantity(id, quantity) {
@@ -107,7 +113,7 @@ export function CartProvider({ children }) {
   }
 
   return (
-    <CartContext.Provider value={[cart, checkoutUrl, isLoading]}>
+    <CartContext.Provider value={{cart, checkoutUrl, isLoading, showCart, setShowCart}}>
       <AddToCartContext.Provider value={addToCart}>
         <UpdateCartQuantityContext.Provider value={updateCartItemQuantity}>
           {children}

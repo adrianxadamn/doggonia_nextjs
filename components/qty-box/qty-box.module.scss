@@ -1,0 +1,38 @@
+.qtyBoxWrapper {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 26px;
+  border: 1px solid #eee;
+  button {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30px;
+    padding: 0;
+  }
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    width: 30px;
+    padding: 0;
+    min-height: auto;
+    height: 100%;
+    margin: 0;
+  }
+}

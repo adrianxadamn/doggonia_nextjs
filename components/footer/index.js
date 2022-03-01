@@ -67,9 +67,7 @@ const Footer = ({props}) => {
         </span>
         <div className={classes.footerInstagramLink}>
           <Link href="https://www.instagram.com/doggoniasupplyco/">
-            <a><FontAwesomeIcon 
-              icon={faInstagram}
-            />Follow Us On Instagram</a>
+            <a><FontAwesomeIcon icon={faInstagram}/>Follow Us On Instagram</a>
           </Link>
         </div>
         <Image src="/images/secure-checkout.png" width="363" height="50" layout="fixed" />

@@ -1,19 +1,30 @@
 import { createCheckout, updateCheckout } from '../lib/shopify';
 
-export const getFirstVariant = (product) => {
+/*
+  Shopify Getter Helpers
+*/
+
+
+export function getFirstVariant(product) {
   if (product && product.variants && product.variants.edges) {
     return product.variants.edges[0].node;
   }
   return undefined
 };
 
-export const getProductImages = (product) => {
+export function getProductImages(product) {
   if (product && product.images && product.images.edges) {
     return product.images.edges.map(image => image.node);
   }
   return undefined
 };
 
+export function getAllVariants(product) {
+  if (product && product.variants && product.variants.edges) {
+    return product.variants.edges.map(variant => variant.node)
+  }
+  return undefined;
+};
 
 /*
   Cart Helpers
@@ -66,4 +77,8 @@ export function getCartSubTotal(cart) {
     cart.forEach(item => totalPrice += parseInt(item.variantQuantity) * parseFloat(item.variantPrice))
     return Math.round(totalPrice * 100) / 100
   }
+}
+
+export function getLineItemSubTotal(item) {
+  return item.variantQuantity * item.variantPrice;
 }

@@ -18,9 +18,7 @@ const ProductPage = ({ productData }) => {
 export async function getStaticPaths({ params }) {
 
   const productSlugs = await getProductSlugs();
-
-  console.log("productSlugs:", productSlugs);
-
+  
   const paths = productSlugs.map((slug) => {    
     const product = slug.node.handle
     return {

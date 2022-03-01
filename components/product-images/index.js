@@ -19,7 +19,6 @@ const ProductImages = ({product}) => {
   return (
 		<Slider className={classes.productSlider} {...settings}>
 			{images.map(image => {
-        console.log(image)
         return (
           <div key={image.id} className={classes.productImage}>
             <Image src={image.originalSrc} layout="fill" objectFit="contain" />
