@@ -25,11 +25,68 @@
   padding-right: 32px;
 }
 
-.page--frequently-asked-questions {
+.page--frequently-asked-questions,
+.page--contact-us {
   max-width: 800px;
   h1 {
     margin-bottom: 40px;
   }
 }
+
+
+.form {
+  .input,
+	.textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.22px;
+		color: #666666;
+		border: none;
+    background-color: #f4f4f4;
+		margin-bottom: 10px;
+		padding: 10px 12px;
+		width: 100%;
+		resize: none;
+    &::-webkit-input-placeholder {
+		  opacity: 0.8;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  opacity: 0.8;
+		}
+		&::-moz-placeholder {  /* Firefox 19+ */
+		  opacity: 0.8;
+		}
+		&:-ms-input-placeholder {
+		  opacity: 0.8;
+		}
+  }
+
+  .input {
+    height: 44px;
+  }
+
+  .input-group--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .input-group {
+      width: 100%;
+      @include mq($screen-md) {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+
+  .form-submit-btn {
+    width: 220px;
+    height: 48px;
+    button {
+      height: 100%;
+    }
+  }
+}
+
 
 
