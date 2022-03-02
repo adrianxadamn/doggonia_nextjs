@@ -5,11 +5,15 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { useCartContext, useAddToCartContext } from '@/context/CartContext';
 import PromoBar from '@/components/promo-bar';
 import LogoBlack from '@/svgs/doggonia-logo-black.svg';
 import classes from './main-header.module.scss';
 
 const MainHeader = ({props}) => {
+
+  const setShowCart = useCartContext().setShowCart;
+
   return (
     <div className={classes.mainHeader}>
       <PromoBar />
@@ -48,7 +52,7 @@ const MainHeader = ({props}) => {
               </Link>
             </li>
           </ul>
-          <button className={classes.cartBtn}>
+          <button onClick={() => setShowCart(true)} className={classes.cartBtn}>
             <FontAwesomeIcon 
               icon={faShoppingCart}
               style={{ fontSize: 25, color: "black" }}

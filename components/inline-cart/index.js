@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCartContext, useAddToCartContext } from '@/context/CartContext';
 import CartItem from '@/components/cart-item';
+import Button from '@/components/button';
 import classes from './inline-cart.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -39,7 +40,7 @@ const InlineCart = ({props}) => {
             <span>Total</span>
           </div>
           <p className={classes.cartDisclaimer}>Shipping and taxes calculated at checkout</p>
-          <button>Checkout</button>
+          <Button type="text">Checkout</Button>
         </div>
       </div>
     </div>

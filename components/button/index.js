@@ -3,9 +3,9 @@ import classes from './button.module.scss';
 
 const Button = (props) => {
   return (
-    <div className={classes.button}>
-      {props.text}
-    </div>
+    <button type={props.type} className={classes.button}>
+      {props.children}
+    </button>
   );
 };
 

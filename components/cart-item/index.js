@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './cart-item.module.scss';
 import QtyBox from '@/components/qty-box';
 import Image from 'next/image';
+import Link from 'next/link';
 import { getProductImages, getLineItemSubTotal } from '@/utils/helpers';
 
 const CartItem = ({item}) => {
@@ -15,10 +16,20 @@ const CartItem = ({item}) => {
   return (
     <li className={classes.cartItem}>
       <div className={classes.cartImage}>
-        <Image src={images[0].originalSrc} alt={item.variantTitle} layout="fill" objectFit="contain"  />
+        <Link href={`/products/${item.product.handle}`}>
+          <a>
+            <Image src={images[0].originalSrc} alt={item.variantTitle} layout="fill" objectFit="contain"  />
+          </a>
+        </Link>
       </div>
       <div className={classes.cartItemContent}>
-        <h3>{item.product.title} - {item.variantTitle}</h3>
+      <h3>
+        <Link href={`/products/${item.product.handle}`}>
+          <a>
+            {item.product.title} - {item.variantTitle}
+          </a>
+        </Link>
+      </h3>
         <div className={classes.cartItemQtyBoxTotalWrap}>
           <QtyBox quantity={item.variantQuantity} handleUpdateQty={handleCartUpdateQty} />
           ${getLineItemSubTotal(item)}

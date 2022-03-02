@@ -1,0 +1,9 @@
+.select {
+  margin: 20px 0;
+  [class$="-control"] {
+    border-radius: 0;
+  }
+  [class$="-ValueContainer"] {
+    padding: 0 10px;
+  }
+}

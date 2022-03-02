@@ -17,6 +17,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .cartContent {
@@ -58,7 +59,7 @@
 
 .cartFooter {
   position: absolute;
-  bottom: 65px;
+  bottom: 20px;
   padding-top: 20px;
   width: calc(100% - 40px);
   background-color: $color-white;

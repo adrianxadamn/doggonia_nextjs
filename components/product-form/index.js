@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import Button from '@/components/button';
 import QtyBox from '@/components/qty-box';
 import classes from './product-form.module.scss';
 import { getAllVariants } from '@/utils/helpers';
 import { useCartContext, useAddToCartContext } from '@/context/CartContext';
+import Select from 'react-select';
 
 const ProductForm = ({product}) => {
 
   const variants = getAllVariants(product);
-  const [selectedVariant, setSelectedVariant] = useState(variants[0]);
+  const [selectedVariant, setSelectedVariant] = useState({
+    'variant': variants[0],
+    'value': variants[0].id,
+    'label': variants[0].title
+  });
   const [quantity, setQuantity] = useState(1);
   const addToCart = useAddToCartContext();
 
-  const handleVariantChange = (id) => {
-    console.log(id);
-    const variant = variants.find(variant => variant.id === id);
-    setSelectedVariant(variant);
-  };
+  const options = variants.map(variant => {
+    return {
+      variant,
+      value: variant.id,
+      label: variant.title
+    }
+  });
 
   const handleUpdateQty = (step) => {
     if (step === 'inc') {
@@ -33,14 +41,14 @@ const ProductForm = ({product}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("selectedVariant:", selectedVariant);
+    const { variant } = selectedVariant;
     if (quantity !== '') {
       addToCart({
         product,
-        variantId: selectedVariant.id, // required
+        variantId: variant.id, // required
         variantQuantity: quantity, // required
-        variantPrice: selectedVariant.price,
-        variantTitle: selectedVariant.title,
+        variantPrice: variant.price,
+        variantTitle: variant.title,
       });
     }
   }
@@ -51,13 +59,15 @@ const ProductForm = ({product}) => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)} className={classes.productForm}>
-      <select onChange={(e) => handleVariantChange(e.target.value)}>
-        {variants.map(variant => {
-          return <option value={variant.id} key={variant.id}>{variant.title}</option>
-        })}
-      </select>
+      <Select 
+        className={classes.select}
+        defaultValue={selectedVariant}
+        onChange={setSelectedVariant}
+        options={options} />
       <QtyBox quantity={quantity} handleUpdateQty={handleUpdateQty} />
-      <button type="text">Add to cart</button>
+      <Button props={{type: 'text'}}>
+        Add to cart
+      </Button>
     </form>
   );
 };

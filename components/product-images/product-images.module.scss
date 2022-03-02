@@ -1,8 +1,14 @@
-.productSlider {
+.productImages {
   width: 40%;
 }
 
 .productImage {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.slickThumbnail {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
