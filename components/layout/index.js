@@ -4,6 +4,24 @@ import { CartProvider } from '@/context/CartContext';
 import MainHeader from '@/components/main-header';
 import Footer from '@/components/footer';
 import InlineCart from '@/components/inline-cart';
+import { TransitionGroup, Transition } from 'react-transition-group';
+
+const timeout = 100;
+
+const styles = {
+  entering: {
+    position: 'absolute',
+    opacity: 0,
+  },
+  entered: {
+    transition: `opacity ${timeout}ms ease-in-out`,
+    opacity: 1,
+  },
+  exiting: {
+    transition: `opacity ${timeout}ms ease-in-out`,
+    opacity: 0
+  },
+};
 
 const Layout = (props) => {
   const handle = props.children.props.handle;
@@ -23,9 +41,15 @@ const Layout = (props) => {
       </Head>
       <InlineCart />
       <MainHeader />
-      <div className={`container ${pageSpecificClass}`}>
-        {props.children}
-      </div>
+      <TransitionGroup>
+        <Transition key={handle} timeout={timeout}>
+          {(status) => (
+            <div className={`container ${pageSpecificClass}`} style={styles[status]}>
+              {props.children}
+            </div>
+          )}
+        </Transition>
+      </TransitionGroup>
       <Footer />
     </CartProvider>
   );

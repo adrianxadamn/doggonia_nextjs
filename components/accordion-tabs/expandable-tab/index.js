@@ -14,11 +14,11 @@ const ExpandableTab = (props) => {
       {!!show && props.children.props.children[1]}
 
       {!!show ? (
-        <div class={classes.toggle}>
+        <div className={classes.toggle}>
           <FontAwesomeIcon icon={faMinus} />
         </div>
       ):(
-        <div class={classes.toggle}>
+        <div className={classes.toggle}>
           <FontAwesomeIcon icon={faPlus} />
         </div>
       )}
