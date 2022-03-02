@@ -38,6 +38,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       productData,
+      handle: productData.handle
     },
   }
 }

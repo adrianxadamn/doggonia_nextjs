@@ -1,0 +1,18 @@
+.accordionTabs {
+  ul {
+    padding: 17px 0 0;
+    border-bottom: 2px solid #E1E1E1;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+
+  ul.expand {
+    max-height: 100%;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    padding-right: 50px;
+  }
+}

@@ -33,7 +33,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       products: collectionData.products.map(product => product.node),
-      collection: collectionData.collection
+      collection: collectionData.collection,
+      handle: params.collection
     },
   }
 }

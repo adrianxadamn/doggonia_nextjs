@@ -3,6 +3,10 @@
 @import './vendor/slick.scss';
 
 
+.basicPage {
+  margin: 100px 0;
+}
+
 .collectionPage {
   text-align: center;
   margin: 32px 0;
@@ -20,3 +24,12 @@
   width: 60%;
   padding-right: 32px;
 }
+
+.page--frequently-asked-questions {
+  max-width: 800px;
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+

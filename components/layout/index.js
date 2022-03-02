@@ -6,6 +6,9 @@ import Footer from '@/components/footer';
 import InlineCart from '@/components/inline-cart';
 
 const Layout = (props) => {
+  const handle = props.children.props.handle;
+  const pageSpecificClass = `page--${handle}`;
+
   return (
     <CartProvider>
       <Head>
@@ -20,7 +23,7 @@ const Layout = (props) => {
       </Head>
       <InlineCart />
       <MainHeader />
-      <div className="container">
+      <div className={`container ${pageSpecificClass}`}>
         {props.children}
       </div>
       <Footer />

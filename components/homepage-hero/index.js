@@ -11,7 +11,7 @@ const HomepageHero = ({props}) => {
           <DoggoniaLogoWhite />
         </div>
         <p>Check out our products!</p>
-        <Button text="Shop Now" link="/collections/shop-all" />
+        <Button link="/collections/shop-all" extraClasses={classes.button}>Shop Now</Button>
       </div>
       <div style={{ position: "relative", width: "100%", paddingBottom: "50%" }}>
         <Image src="/images/hphero-1_D.jpg" alt="Homepage Hero" layout="fill" objectFit="contain" />
