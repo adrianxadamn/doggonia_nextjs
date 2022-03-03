@@ -50,6 +50,14 @@ export function CartProvider({ children }) {
     console.log("cart:", cart);
   }, [cart]);
 
+  useEffect(() => {
+    if (showCart) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [showCart]);
+
   async function addToCart(newItem) {
     setisLoading(true)
     // empty cart

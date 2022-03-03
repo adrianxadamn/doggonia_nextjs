@@ -1,5 +1,35 @@
 @import '@/styles/helpers/helpers';
 
+.slide-left-enter .cart-form {
+  right: -100%;
+}
+
+.slide-left-enter-active .cart-form {
+  right: 0;
+}
+
+.slide-left-enter-done .cart-form {
+  right: 0;
+}
+
+.slide-left-exit .cart-form {
+  right: -50%;
+}
+
+.inlineCartEnter .cartContent {
+  right: -100%;
+}
+.inlineCartEnterActive .cartContent {
+  right: 0;
+}
+.inlineCartEnterDone .cartContent {
+  right: 0;
+}
+.inlineCartExit .cartContent {
+  right: -50%;
+}
+
+
 .inlineCart {
   position: relative;
   width: 100%;
@@ -30,6 +60,7 @@
   top: 0;
   bottom: 0;
   padding: 0 20px;
+  transition: right 0.3s ease-in-out;
 }
 
 .cartHeader {
