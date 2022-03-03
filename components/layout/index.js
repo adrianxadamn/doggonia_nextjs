@@ -6,7 +6,7 @@ import Footer from '@/components/footer';
 import InlineCart from '@/components/inline-cart';
 import { TransitionGroup, Transition } from 'react-transition-group';
 
-const timeout = 100;
+const timeout = 1000;
 
 const styles = {
   entering: {
@@ -41,11 +41,11 @@ const Layout = (props) => {
       </Head>
       <InlineCart />
       <MainHeader />
-      <main className={`container ${pageSpecificClass}`}>
+      <main className="container">
         <TransitionGroup>
           <Transition key={handle} timeout={timeout}>
             {(status) => (
-              <div style={styles[status]}>
+              <div className={pageSpecificClass} style={styles[status]}>
                 {props.children}
               </div>
             )}
