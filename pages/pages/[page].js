@@ -15,11 +15,15 @@ export async function getStaticPaths({ params }) {
 
   const productSlugs = await getPageSlugs();
   
-  const paths = productSlugs.map((slug) => {    
-    const page = slug.node.handle
-    return {
-      params: { page }
-    }
+  const uniquePageHandles = ['contact-us', 'frequently-asked-questions'];
+
+  const paths = productSlugs
+    .filter(slug => !uniquePageHandles.includes(slug.node.handle))
+    .map((slug) => {    
+      const page = slug.node.handle
+      return {
+        params: { page }
+      }
   })
 
   return {
