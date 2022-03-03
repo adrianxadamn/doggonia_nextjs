@@ -6,7 +6,7 @@ import Footer from '@/components/footer';
 import InlineCart from '@/components/inline-cart';
 import { TransitionGroup, Transition } from 'react-transition-group';
 
-const timeout = 100;
+const timeout = 250;
 
 const styles = {
   entering: {
