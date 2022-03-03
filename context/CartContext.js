@@ -4,6 +4,7 @@
 
 import { createContext, useContext, useState, useEffect } from 'react';
 import { createShopifyCheckout, updateShopifyCheckout, setLocalData, saveLocalData } from '@/utils/helpers';
+import * as ga from '@/lib/google-analytics';
 
 const CartContext = createContext()
 const AddToCartContext = createContext()
@@ -86,7 +87,8 @@ export function CartProvider({ children }) {
       await updateShopifyCheckout(newCartWithItem, checkoutId)
       saveLocalData(newCartWithItem, checkoutId, checkoutUrl)
     }
-    setisLoading(false)
+    ga.event('Add to Cart', window.location.href, newItem.variantId);
+    setisLoading(false);
     setShowCart(true);
   }
 

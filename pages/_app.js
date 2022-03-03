@@ -5,6 +5,7 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 import '../styles/globals.scss';
 import Layout from '../components/layout';
 import Router from "next/router";
+import * as ga from '@/lib/google-analytics';
 
 const routeChange = () => {
   // Temporary fix to avoid flash of unstyled content
@@ -21,8 +22,13 @@ const routeChange = () => {
   tempFix();
 };
 
-Router.events.on("routeChangeComplete", routeChange );
+const onRountChangeComplete = (url) => {
+  ga.pageview(url);
+};
+
 Router.events.on("routeChangeStart", routeChange );
+Router.events.on("routeChangeComplete", routeChange );
+Router.events.on("routeChangeComplete", onRountChangeComplete );
 
 function MyApp({ Component, pageProps }) {
   
