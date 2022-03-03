@@ -5,6 +5,7 @@ module.exports = {
   images: {
     domains: ['cdn.shopify.com'],
   },
+  experimental: { optimizeCss: true },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
