@@ -2,8 +2,15 @@
   margin: 20px 0;
   [class$="-control"] {
     border-radius: 0;
+    height: 50px;
   }
   [class$="-ValueContainer"] {
     padding: 0 10px;
+  }
+  [class$="-indicatorContainer"] {
+    cursor: pointer;
+  }
+  [class$="-Input"] {
+    display: none;
   }
 }
