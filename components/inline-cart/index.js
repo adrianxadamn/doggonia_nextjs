@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCartContext, useAddToCartContext } from '@/context/CartContext';
+import { useCartContext } from '@/context/CartContext';
 import CartItem from '@/components/cart-item';
 import Button from '@/components/button';
 import classes from './inline-cart.module.scss';
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClose
 } from "@fortawesome/free-solid-svg-icons";
+import { getCartSubTotal } from '@/utils/helpers';
 const InlineCart = ({props}) => {
 
   const items = useCartContext().cart;
@@ -17,8 +18,6 @@ const InlineCart = ({props}) => {
     return '';
   }
   
-  console.log("items:", items);
-
   return (
     <div className={classes.inlineCart}>
       <div className={classes.overlay} onClick={() => setShowCart(false)}></div>
@@ -37,7 +36,7 @@ const InlineCart = ({props}) => {
         <div className={classes.cartFooter}>
           <div className={classes.cartSubtotal}>
             <span>Subtotal</span>
-            <span>Total</span>
+            <span>${getCartSubTotal(items).toFixed(2)}</span>
           </div>
           <p className={classes.cartDisclaimer}>Shipping and taxes calculated at checkout</p>
           <Button type="text">Checkout</Button>

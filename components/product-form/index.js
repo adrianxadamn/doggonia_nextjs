@@ -3,7 +3,7 @@ import Button from '@/components/button';
 import QtyBox from '@/components/qty-box';
 import classes from './product-form.module.scss';
 import { getAllVariants } from '@/utils/helpers';
-import { useCartContext, useAddToCartContext } from '@/context/CartContext';
+import { useAddToCartContext } from '@/context/CartContext';
 import Select from 'react-select';
 
 const ProductForm = ({product}) => {

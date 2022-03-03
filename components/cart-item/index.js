@@ -4,13 +4,19 @@ import QtyBox from '@/components/qty-box';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages, getLineItemSubTotal } from '@/utils/helpers';
+import { useUpdateCartQuantityContext } from '@/context/CartContext';
 
 const CartItem = ({item}) => {
   
   const images = getProductImages(item.product);
+  const updateCartItemQuantity = useUpdateCartQuantityContext();
 
-  const handleCartUpdateQty = () => {
-
+  const handleCartUpdateQty = (step) => {
+    if (step === 'inc') {
+      updateCartItemQuantity(item.variantId, item.variantQuantity + 1);
+    } else {
+      updateCartItemQuantity(item.variantId, item.variantQuantity - 1);
+    }
   };
 
   return (
@@ -32,7 +38,7 @@ const CartItem = ({item}) => {
       </h3>
         <div className={classes.cartItemQtyBoxTotalWrap}>
           <QtyBox quantity={item.variantQuantity} handleUpdateQty={handleCartUpdateQty} />
-          ${getLineItemSubTotal(item)}
+          ${getLineItemSubTotal(item).toFixed(2)}
         </div>
       </div>
     </li>
