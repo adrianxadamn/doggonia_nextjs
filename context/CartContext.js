@@ -87,7 +87,7 @@ export function CartProvider({ children }) {
       await updateShopifyCheckout(newCartWithItem, checkoutId)
       saveLocalData(newCartWithItem, checkoutId, checkoutUrl)
     }
-    ga.event('Add to Cart', window.location.href, newItem.variantId);
+    ga.event('add_to_cart', window.location.href, newItem.variantId);
     setisLoading(false);
     setShowCart(true);
   }
