@@ -5,7 +5,7 @@ import Button from '@/components/button';
 
 const HomepageHero = ({props}) => {
   return (
-    <div className={classes.hero}>
+    <div className={classes.hero + ' ' + 'container--margin-expand'}>
       <div className={classes.heroContent}>
         <div className={classes.logo}>
           <DoggoniaLogoWhite />
