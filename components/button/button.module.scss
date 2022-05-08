@@ -25,6 +25,14 @@
 	}
 }
 
+a.button {
+	color: $color-white;
+	&:hover {
+		background-color: $color-black;
+		opacity: 1;
+	}
+}
+
 .button--white {
 	background-color: $color-white;
 	border: 1px solid $color-black-light;

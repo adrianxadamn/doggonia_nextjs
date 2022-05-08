@@ -3,7 +3,10 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['cdn.shopify.com'],
+    domains: [
+      'cdn.shopify.com',
+      'cdn.sanity.io'
+    ],
   },
   experimental: { optimizeCss: true },
   webpack(config) {
